@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background: url('img/bg.jpg'), url('img/mask.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: screen;
+    position: relative;
+}
+.container{
+    width: 85%;
+    margin: 0 auto;
+}
+body{
+    overflow-x: hidden ;
+}
+header nav{
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+header nav .logo a{
+    position: relative;
+    top: 20px;
+    left: 50px;
+    font-size: 35px;
+    color: #015b75;
+    font-weight: 700;
+}
+header nav .toggle{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: url('img/menu.png');
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 20px;
+    right: 50px;
+    
+}
+.toggle.active{
+    width: 25px;
+    height: 25px;
+    background: url('img/close.png');
+    background-size: 20px;
+    background: url('img/close.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+.banner-content{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+.banner-content h2{
+    font-size: 11vw;
+    color: #015b75;
+    font-family: 'Kaushan Script', cursive;
+}
+.play{
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.play img{
+    max-width: 40px;
+}
+.play span{
+    font-size: 20px;
+    margin-left: 10px;
+    color: #015b75;
+    font-weight: bold;
+}
+.social{
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+}
+.social ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.social ul li a{
+    display: inline-block;
+    margin: 5px 0;
+    transform: scale(0.7);
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -o-transform: scale(0.7);
+}
+.navigation{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s ease;
+    -webkit-transition: 0.4s ease;
+    -moz-transition: 0.4s ease;
+    -ms-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+}
+.navigation.active{
+    opacity: 1;
+    visibility: visible;
+}
+.navigation.active .toggle{
+    display: none;
+}
+.navigation ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.navigation ul li a{
+    display: inline-block;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #015b75;
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transition: 0.5s  ease;
+    -webkit-transition: 0.5s  ease;
+    -moz-transition: 0.5s  ease;
+    -ms-transition: 0.5s  ease;
+    -o-transition: 0.5s  ease;
+}
+.navigation ul li a:hover{
+    color: #da1b6b;
+}
+.trailer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+}
+.trailer video{
+    width: 90%;
+    outline: none;
+}
+.trailer.active{
+    opacity: 1;
+    visibility: visible;
+}
+.trailer img{
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}

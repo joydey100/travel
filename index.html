@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Travel | Landing Page</title>
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Part -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="#"> Travel </a>
+                </div>
+                <div class="toggle" onclick="toggleMenu();">
+                </div>
+            </nav>
+            <div class="banner-content">
+                <h2> Dream <br> Trip</h2>
+            </div>
+            <div class="play" onclick="video();">
+                <img src="img/play.png" alt="PlayVideo"> <span>Play Video</span>
+            </div>
+            <div class="social">
+                <ul>
+                    <li><a href="#"><img src="img/facebook.png" alt="fb"></a></li>
+                    <li><a href="#"><img src="img/twitter.png" alt="twitter"></a></li>
+                    <li><a href="#"><img src="img/instagram.png" alt="instagram"></a></li>
+                </ul>
+            </div>
+        </div>  
+        <div class="navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Booking</a></li>
+                <li><a href="#">Tour</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>      
+    </header>
+    <div class="trailer">
+        <video src="img/clip.mp4" controls="true"></video>
+        <img src="img/close.png" alt="close" class="close" onclick="video();">
+    </div>
+
+
+    <!-- JS files -->
+    <script>
+        function toggleMenu(){
+            const toggle = document.querySelector('.toggle');
+            const navigation = document.querySelector('.navigation');
+            toggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+        function video(){
+            const video = document.querySelector(".trailer");
+            video.classList.toggle("active");
+        }
+    </script>
+    
+</body>
+</html>
